@@ -150,6 +150,15 @@ def render_profile_panel_contents():
         persistence_module.save_profile(conn, profile)
         conn.close()
 
+    st.markdown("---")
+    st.markdown("**\U0001F527 Admin**")
+    if st.button("\U0001F504 Refresh recommendations", key="refresh_cache_btn"):
+        from scripts.seed_cache import seed
+
+        seed(CACHE_DB_PATH)
+        st.success("Recommendation cache refreshed.")
+        st.rerun()
+
 
 def main():
     init_state()
