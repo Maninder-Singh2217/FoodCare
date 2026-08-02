@@ -59,7 +59,7 @@ def test_profile_panel_contains_required_labels_desktop(browser):
     page.goto(BASE_URL, wait_until="networkidle", timeout=30000)
     page.wait_for_timeout(1500)
     body_text = page.inner_text("body")
-    assert "Savreen's Saved Profile" in body_text
+    assert "Shweta's Saved Profile" in body_text
     assert "Mushrooms" in body_text
     assert "Bell Peppers (Capsicum)" in body_text
     assert "Overly Oily Gravies" in body_text
@@ -73,7 +73,7 @@ def test_profile_panel_visible_on_desktop_width(browser):
     page, context, errors = new_page(browser, DESKTOP_VIEWPORT)
     page.goto(BASE_URL, wait_until="networkidle", timeout=30000)
     page.wait_for_timeout(1500)
-    profile_heading = page.locator("text=Savreen's Saved Profile")
+    profile_heading = page.locator("text=Shweta's Saved Profile")
     assert profile_heading.is_visible()
     context.close()
 
@@ -82,7 +82,7 @@ def test_profile_panel_hidden_by_default_on_mobile_width(browser):
     page, context, errors = new_page(browser, IPHONE_VIEWPORT, user_agent=IPHONE_UA)
     page.goto(BASE_URL, wait_until="networkidle", timeout=30000)
     page.wait_for_timeout(1500)
-    profile_heading = page.locator("text=Savreen's Saved Profile")
+    profile_heading = page.locator("text=Shweta's Saved Profile")
     assert profile_heading.count() == 0 or not profile_heading.first.is_visible()
     context.close()
 
@@ -97,7 +97,7 @@ def test_profile_bottom_sheet_opens_on_mobile_after_icon_tap(browser):
     )
     visible_icon.click()
     page.wait_for_timeout(1500)
-    profile_heading = page.locator("text=Savreen's Saved Profile")
+    profile_heading = page.locator("text=Shweta's Saved Profile")
     assert profile_heading.first.is_visible()
     assert errors == []
     context.close()

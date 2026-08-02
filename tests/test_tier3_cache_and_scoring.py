@@ -5,7 +5,7 @@ from cravecare import scoring
 
 def test_seeded_cache_has_items(seeded_cache_conn):
     items = cache_module.read_all(seeded_cache_conn)
-    assert len(items) == 16
+    assert len(items) == 17
 
 
 def test_cache_read_is_area_scoped(seeded_cache_conn):

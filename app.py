@@ -18,7 +18,12 @@ st.set_page_config(page_title="CraveCare", page_icon="\U0001F37D️", layout="wi
 CACHE_DB_PATH = Path(os.environ.get("CRAVECARE_CACHE_DB", cache_module.DEFAULT_CACHE_PATH))
 PROFILE_DB_PATH = Path(os.environ.get("CRAVECARE_PROFILE_DB", persistence_module.DEFAULT_DB_PATH))
 
-CUISINE_OPTIONS = ["Chinese", "North Indian", "South Indian", "Sindhi Comfort", "Surprise Me"]
+CUISINE_OPTIONS = [
+    "Chinese", "North Indian", "South Indian", "Sindhi Comfort",
+    "Fast Food", "Street Food", "Pizza", "Burgers", "Rolls & Wraps",
+    "Surprise Me",
+]
+CUISINE_BUTTONS_PER_ROW = 5
 DRINK_OPTIONS = ["Auto (Rotate)", "Hot (Chai / Hot Choc)", "Warm (Soups / Teas)", "Cold / None"]
 DESSERT_OPTIONS = ["Rotate Her Favs", "Skip"]
 
@@ -109,7 +114,7 @@ def render_curated_meal(meal: CuratedMeal, key_suffix: str = ""):
 
 
 def render_profile_panel_contents():
-    st.subheader("\U0001F464 Savreen's Saved Profile")
+    st.subheader("\U0001F464 Shweta's Saved Profile")
     st.write(f"\U0001F4CD Location: {st.session_state.session_location}")
 
     st.markdown("**\U0001F6AB Permanent Hard NOs**")
@@ -250,11 +255,13 @@ def main():
 
     with desktop_main:
         st.markdown("#### \U0001F4CD STEP 1: Cuisine Choice")
-        cuisine_cols = st.columns(len(CUISINE_OPTIONS))
-        for col, cuisine in zip(cuisine_cols, CUISINE_OPTIONS):
-            with col:
-                if st.button(cuisine, key=f"cuisine_{cuisine}"):
-                    st.session_state.selected_cuisine = cuisine
+        for row_start in range(0, len(CUISINE_OPTIONS), CUISINE_BUTTONS_PER_ROW):
+            row_options = CUISINE_OPTIONS[row_start:row_start + CUISINE_BUTTONS_PER_ROW]
+            cuisine_cols = st.columns(CUISINE_BUTTONS_PER_ROW)
+            for col, cuisine in zip(cuisine_cols, row_options):
+                with col:
+                    if st.button(cuisine, key=f"cuisine_{cuisine}"):
+                        st.session_state.selected_cuisine = cuisine
 
         if st.session_state.selected_cuisine:
             st.caption(f"Selected: {st.session_state.selected_cuisine}")

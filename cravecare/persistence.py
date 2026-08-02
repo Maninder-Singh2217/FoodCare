@@ -32,6 +32,7 @@ DEFAULT_DESSERT_POOL = [
     "Blueberry Cream Cheese Waffle",
     "Warm Fudgy Brownie",
     "Gulab Jamun",
+    "Almond Cocoa Butter Waffle",
 ]
 DEFAULT_DRINK_POOL = [
     "Masala Chai",

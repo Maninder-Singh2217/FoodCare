@@ -19,7 +19,7 @@ DRINK_LABEL_TO_DISH_NAMES = {
 }
 DESSERT_POOL_NAMES = {
     "Nutella Dark Chocolate Waffle", "Blueberry Cream Cheese Waffle",
-    "Warm Fudgy Brownie", "Gulab Jamun",
+    "Warm Fudgy Brownie", "Gulab Jamun", "Almond Cocoa Butter Waffle",
 }
 DRINK_POOL_NAMES = {
     "Masala Chai", "Hot Chocolate", "Warm Honey Lemon Water", "Peach Iced Tea",

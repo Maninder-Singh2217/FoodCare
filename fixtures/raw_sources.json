@@ -104,6 +104,23 @@
       ]
     },
     {
+      "restaurant_id": "r_bandra_dessert_05",
+      "restaurant_name": "Sweet Nothings Bandra",
+      "area": "Bandra West",
+      "cuisine": "Dessert",
+      "dish_id": "d_almond_cocoa_waffle",
+      "dish_name": "Almond Cocoa Butter Waffle",
+      "tags": ["contains_dairy"],
+      "prep_delivery_minutes": 24,
+      "swiggy_rating": 4.6,
+      "google_rating": 4.5,
+      "reddit_comments": [
+        {"text": "Almond cocoa butter waffle is so rich, the almond crunch makes it stand out.", "upvotes": 21, "posted_days_ago": 28},
+        {"text": "Different from the usual chocolate waffles, cocoa butter gives it a smoother finish.", "upvotes": 13, "posted_days_ago": 75},
+        {"text": "New favorite here, great texture from the almonds.", "upvotes": 6, "posted_days_ago": 130}
+      ]
+    },
+    {
       "restaurant_id": "r_bandra_dessert_01",
       "restaurant_name": "Sweet Nothings Bandra",
       "area": "Bandra West",
