@@ -160,8 +160,42 @@ def render_profile_panel_contents():
         st.rerun()
 
 
+APP_BACKGROUND = "#EFE7D9"  # Soft Linen
+APP_CARD_BACKGROUND = "#FAF7F0"  # slightly lighter, so cards lift off the background
+APP_TEXT_COLOR = "#3A362E"  # warm dark brown-gray for contrast against the cream
+APP_MUTED_TEXT_COLOR = "#6B6455"
+
+
+def render_global_theme():
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-color: {APP_BACKGROUND};
+        }}
+        .stApp, .stApp p, .stApp span, .stApp div, .stApp label,
+        .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {{
+            color: {APP_TEXT_COLOR};
+        }}
+        .stApp [data-testid="stCaptionContainer"], .stApp small {{
+            color: {APP_MUTED_TEXT_COLOR} !important;
+        }}
+        div[data-testid="stVerticalBlockBorderWrapper"] {{
+            background-color: {APP_CARD_BACKGROUND};
+            border-radius: 8px;
+        }}
+        div[data-testid="stColumn"]:has(.cravecare-profile-marker) {{
+            background-color: {APP_BACKGROUND};
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def main():
     init_state()
+    render_global_theme()
 
     header_col1, header_col2 = st.columns([5, 1])
     with header_col1:
@@ -176,7 +210,7 @@ def main():
         <style>
         @media (max-width: 768px) {{
           div[data-testid="stColumn"]:has(.cravecare-profile-marker) {{
-            {"display:block !important; position:fixed !important; bottom:0; left:0; right:0; top:auto; width:100% !important; max-width:100% !important; z-index:9999; background:var(--background-color,white); max-height:80vh; overflow-y:auto; box-shadow:0 -2px 12px rgba(0,0,0,0.3); border-radius:16px 16px 0 0; padding:1rem;" if is_mobile_sheet_open else "display:none !important;"}
+            {f"display:block !important; position:fixed !important; bottom:0; left:0; right:0; top:auto; width:100% !important; max-width:100% !important; z-index:9999; background:{APP_BACKGROUND}; max-height:80vh; overflow-y:auto; box-shadow:0 -2px 12px rgba(0,0,0,0.3); border-radius:16px 16px 0 0; padding:1rem;" if is_mobile_sheet_open else "display:none !important;"}
           }}
         }}
         </style>
