@@ -129,6 +129,29 @@ def render_profile_panel_contents():
         conn.close()
         st.success("Saved.")
 
+    st.markdown("**\U0001F9C7 Dessert Rotation Favorites**")
+    st.caption("\"Rotate Her Favs\" cycles through whichever desserts you pick here.")
+    selected_desserts = st.multiselect(
+        "Desserts to rotate through",
+        options=persistence_module.DEFAULT_DESSERT_POOL,
+        default=[d for d in st.session_state.profile.dessert_rotation_pool
+                 if d in persistence_module.DEFAULT_DESSERT_POOL],
+        key="dessert_favs_multiselect",
+        label_visibility="collapsed",
+    )
+    if st.button("Save dessert favorites", key="save_dessert_favs_btn"):
+        if not selected_desserts:
+            st.error("Pick at least one dessert to rotate through.")
+        else:
+            conn = get_profile_conn()
+            profile = persistence_module.load_profile(conn)
+            profile.dessert_rotation_pool = selected_desserts
+            profile.dessert_rotation_index = 0
+            persistence_module.save_profile(conn, profile)
+            conn.close()
+            st.session_state.profile = profile
+            st.success("Saved.")
+
     st.markdown("**⚡ Exclude Today Only?**")
     st.checkbox("No Dairy / Cream today", key="override_no_dairy")
     st.checkbox("Skip Rice dishes", key="override_skip_rice")
