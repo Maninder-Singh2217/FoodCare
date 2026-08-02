@@ -192,12 +192,13 @@ def render_global_theme():
         .stApp button[data-testid^="stBaseButton-secondary"] {{
             color: {APP_BUTTON_COLOR} !important;
             border-color: {APP_BUTTON_COLOR} !important;
+            background-color: {APP_CARD_BACKGROUND} !important;
         }}
         .stApp button[data-testid^="stBaseButton-secondary"]:hover,
         .stApp button[data-testid^="stBaseButton-secondary"]:focus {{
             color: {APP_BUTTON_HOVER_COLOR} !important;
             border-color: {APP_BUTTON_HOVER_COLOR} !important;
-            background-color: {APP_CARD_BACKGROUND} !important;
+            background-color: {APP_BACKGROUND} !important;
         }}
         .stApp button[data-testid^="stBaseButton-secondary"] p {{
             color: {APP_BUTTON_COLOR} !important;
@@ -205,6 +206,14 @@ def render_global_theme():
         .stApp button[data-testid^="stBaseButton-secondary"]:hover p,
         .stApp button[data-testid^="stBaseButton-secondary"]:focus p {{
             color: {APP_BUTTON_HOVER_COLOR} !important;
+        }}
+        [data-testid="stCheckbox"] label:not([data-selected="true"]) > div:first-of-type {{
+            background-color: {APP_CARD_BACKGROUND} !important;
+            border-color: {APP_BUTTON_COLOR} !important;
+        }}
+        [data-testid="stRadio"] label:not([data-selected="true"]) > div > div div {{
+            background-color: {APP_CARD_BACKGROUND} !important;
+            border-color: {APP_BUTTON_COLOR} !important;
         }}
         </style>
         """,
