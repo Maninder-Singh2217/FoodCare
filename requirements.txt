@@ -1,0 +1,5 @@
+streamlit>=1.60
+pytest
+playwright
+pytest-playwright
+vaderSentiment

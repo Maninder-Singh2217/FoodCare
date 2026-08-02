@@ -1,0 +1,267 @@
+{
+  "generated_note": "Seeded fixture data for Tier 3 offline tests. Mimics Swiggy/Zomato/Google/Reddit raw responses before scoring/normalization is applied. 'tags' drive hard/soft filtering (§2.3) since dish names alone aren't a reliable filter signal.",
+  "candidates": [
+    {
+      "restaurant_id": "r_bandra_chinese_01",
+      "restaurant_name": "Wok This Way",
+      "area": "Bandra West",
+      "cuisine": "Chinese",
+      "dish_id": "d_hakka_noodles",
+      "dish_name": "Veg Hakka Noodles",
+      "tags": [],
+      "prep_delivery_minutes": 22,
+      "swiggy_rating": 4.5,
+      "google_rating": 4.3,
+      "reddit_comments": [
+        {"text": "Wok This Way's hakka noodles in Bandra are so underrated, best I've had in a while.", "upvotes": 42, "posted_days_ago": 30},
+        {"text": "Ordered from Wok This Way last week, honestly pretty good and quick delivery too.", "upvotes": 18, "posted_days_ago": 60},
+        {"text": "Not bad but a bit oily for my taste, still decent value.", "upvotes": 5, "posted_days_ago": 90},
+        {"text": "This place never disappoints, my go-to for Chinese in Bandra.", "upvotes": 27, "posted_days_ago": 120},
+        {"text": "Meh, average at best, wouldn't order again honestly.", "upvotes": 3, "posted_days_ago": 400}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_chinese_02",
+      "restaurant_name": "Wok This Way",
+      "area": "Bandra West",
+      "cuisine": "Chinese",
+      "dish_id": "d_mushroom_manchurian",
+      "dish_name": "Mushroom Manchurian",
+      "tags": ["contains_mushrooms"],
+      "prep_delivery_minutes": 24,
+      "swiggy_rating": 4.4,
+      "google_rating": 4.2,
+      "reddit_comments": [
+        {"text": "Mushroom manchurian here is excellent, crispy and flavorful.", "upvotes": 12, "posted_days_ago": 45},
+        {"text": "Great gravy, generous portion of mushrooms.", "upvotes": 8, "posted_days_ago": 100},
+        {"text": "A solid choice if you like mushrooms in your Chinese food.", "upvotes": 6, "posted_days_ago": 150}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_ni_01",
+      "restaurant_name": "Punjab Grill Express",
+      "area": "Bandra West",
+      "cuisine": "North Indian",
+      "dish_id": "d_dal_makhani",
+      "dish_name": "Dal Makhani + Butter Naan",
+      "tags": ["contains_dairy"],
+      "prep_delivery_minutes": 35,
+      "swiggy_rating": 4.6,
+      "google_rating": 4.5,
+      "reddit_comments": [
+        {"text": "Best dal makhani I've had delivered in Bandra, so creamy and rich.", "upvotes": 65, "posted_days_ago": 15},
+        {"text": "Punjab Grill Express is consistently amazing, never had a bad order.", "upvotes": 40, "posted_days_ago": 45},
+        {"text": "Great comfort food, slightly heavy but worth it.", "upvotes": 12, "posted_days_ago": 100},
+        {"text": "Loved it, felt like homemade dal makhani honestly.", "upvotes": 8, "posted_days_ago": 200}
+      ]
+    },
+    {
+      "restaurant_id": "r_powai_south_01",
+      "restaurant_name": "Dosa Junction",
+      "area": "Powai",
+      "cuisine": "South Indian",
+      "dish_id": "d_masala_dosa",
+      "dish_name": "Masala Dosa + Filter Coffee",
+      "tags": ["contains_dairy"],
+      "prep_delivery_minutes": 18,
+      "swiggy_rating": 4.4,
+      "google_rating": 4.6,
+      "reddit_comments": [
+        {"text": "Dosa Junction in Powai does the crispiest dosas, hands down local gem.", "upvotes": 55, "posted_days_ago": 20},
+        {"text": "Filter coffee here is on point, reminds me of Chennai.", "upvotes": 22, "posted_days_ago": 80}
+      ]
+    },
+    {
+      "restaurant_id": "r_lp_sindhi_01",
+      "restaurant_name": "Sindhi Rasoi",
+      "area": "Lower Parel",
+      "cuisine": "Sindhi Comfort",
+      "dish_id": "d_sai_bhaji",
+      "dish_name": "Sai Bhaji + Rice",
+      "tags": ["contains_rice"],
+      "prep_delivery_minutes": 28,
+      "swiggy_rating": 4.2,
+      "google_rating": 4.1,
+      "reddit_comments": [
+        {"text": "Sindhi Rasoi's sai bhaji tastes just like home, very comforting.", "upvotes": 10, "posted_days_ago": 50}
+      ]
+    },
+    {
+      "restaurant_id": "r_andheri_fast_01",
+      "restaurant_name": "Quick Bites Co",
+      "area": "Andheri",
+      "cuisine": "North Indian",
+      "dish_id": "d_paneer_wrap",
+      "dish_name": "Paneer Tikka Wrap",
+      "tags": ["contains_bell_peppers"],
+      "prep_delivery_minutes": 15,
+      "swiggy_rating": 4.3,
+      "google_rating": 4.0,
+      "reddit_comments": [
+        {"text": "Fastest delivery I've had in Andheri, wrap was solid too.", "upvotes": 15, "posted_days_ago": 10},
+        {"text": "Good for a quick lunch, nothing fancy but reliable.", "upvotes": 6, "posted_days_ago": 70},
+        {"text": "Decent wrap, portion could be bigger honestly.", "upvotes": 4, "posted_days_ago": 150}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_dessert_01",
+      "restaurant_name": "Sweet Nothings Bandra",
+      "area": "Bandra West",
+      "cuisine": "Dessert",
+      "dish_id": "d_nutella_waffle",
+      "dish_name": "Nutella Dark Chocolate Waffle",
+      "tags": ["contains_dairy"],
+      "prep_delivery_minutes": 25,
+      "swiggy_rating": 4.7,
+      "google_rating": 4.6,
+      "reddit_comments": [
+        {"text": "Sweet Nothings' nutella waffle is criminally good, worth every rupee.", "upvotes": 80, "posted_days_ago": 25},
+        {"text": "My favorite dessert spot in Bandra hands down.", "upvotes": 33, "posted_days_ago": 60},
+        {"text": "A bit pricey but the quality justifies it.", "upvotes": 9, "posted_days_ago": 110}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_dessert_02",
+      "restaurant_name": "Sweet Nothings Bandra",
+      "area": "Bandra West",
+      "cuisine": "Dessert",
+      "dish_id": "d_gulab_jamun",
+      "dish_name": "Gulab Jamun",
+      "tags": ["contains_dairy"],
+      "prep_delivery_minutes": 20,
+      "swiggy_rating": 4.5,
+      "google_rating": 4.4,
+      "reddit_comments": [
+        {"text": "Classic gulab jamun done right, warm and soft.", "upvotes": 15, "posted_days_ago": 30},
+        {"text": "Best gulab jamun in Bandra, not overly sweet.", "upvotes": 9, "posted_days_ago": 90},
+        {"text": "Simple but perfect execution every time.", "upvotes": 5, "posted_days_ago": 130}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_dessert_03",
+      "restaurant_name": "Sweet Nothings Bandra",
+      "area": "Bandra West",
+      "cuisine": "Dessert",
+      "dish_id": "d_brownie",
+      "dish_name": "Warm Fudgy Brownie",
+      "tags": ["contains_dairy"],
+      "prep_delivery_minutes": 22,
+      "swiggy_rating": 4.6,
+      "google_rating": 4.5,
+      "reddit_comments": [
+        {"text": "This brownie is unreal, gooey center every time.", "upvotes": 30, "posted_days_ago": 40},
+        {"text": "Rich and warm, perfect with ice cream.", "upvotes": 11, "posted_days_ago": 95},
+        {"text": "My favorite dessert order from this place.", "upvotes": 7, "posted_days_ago": 140}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_dessert_04",
+      "restaurant_name": "Sweet Nothings Bandra",
+      "area": "Bandra West",
+      "cuisine": "Dessert",
+      "dish_id": "d_blueberry_waffle",
+      "dish_name": "Blueberry Cream Cheese Waffle",
+      "tags": ["contains_dairy"],
+      "prep_delivery_minutes": 26,
+      "swiggy_rating": 4.5,
+      "google_rating": 4.3,
+      "reddit_comments": [
+        {"text": "Blueberry cream cheese waffle is a great mix of tart and sweet.", "upvotes": 18, "posted_days_ago": 35},
+        {"text": "Cream cheese topping is generous, worth ordering again.", "upvotes": 10, "posted_days_ago": 88},
+        {"text": "Great weekend treat from this place.", "upvotes": 4, "posted_days_ago": 160}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_drink_01",
+      "restaurant_name": "Chai Point Bandra",
+      "area": "Bandra West",
+      "cuisine": "Drinks",
+      "dish_id": "d_masala_chai",
+      "dish_name": "Masala Chai",
+      "tags": ["contains_dairy"],
+      "prep_delivery_minutes": 12,
+      "swiggy_rating": 4.4,
+      "google_rating": 4.3,
+      "reddit_comments": [
+        {"text": "Chai Point never misses, perfect masala chai every time.", "upvotes": 20, "posted_days_ago": 40}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_drink_02",
+      "restaurant_name": "Chai Point Bandra",
+      "area": "Bandra West",
+      "cuisine": "Drinks",
+      "dish_id": "d_hot_chocolate",
+      "dish_name": "Hot Chocolate",
+      "tags": ["contains_dairy"],
+      "prep_delivery_minutes": 10,
+      "swiggy_rating": 4.3,
+      "google_rating": 4.2,
+      "reddit_comments": [
+        {"text": "Rich hot chocolate, perfect on a rainy Mumbai evening.", "upvotes": 14, "posted_days_ago": 55},
+        {"text": "Thick and indulgent, worth it.", "upvotes": 6, "posted_days_ago": 120},
+        {"text": "Great comfort drink from this place.", "upvotes": 3, "posted_days_ago": 200}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_drink_03",
+      "restaurant_name": "Chai Point Bandra",
+      "area": "Bandra West",
+      "cuisine": "Drinks",
+      "dish_id": "d_honey_lemon",
+      "dish_name": "Warm Honey Lemon Water",
+      "tags": [],
+      "prep_delivery_minutes": 8,
+      "swiggy_rating": 4.1,
+      "google_rating": 4.0,
+      "reddit_comments": [
+        {"text": "Light and soothing, good option if you want something warm but not heavy.", "upvotes": 9, "posted_days_ago": 60}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_drink_04",
+      "restaurant_name": "Chai Point Bandra",
+      "area": "Bandra West",
+      "cuisine": "Drinks",
+      "dish_id": "d_peach_iced_tea",
+      "dish_name": "Peach Iced Tea",
+      "tags": [],
+      "prep_delivery_minutes": 9,
+      "swiggy_rating": 4.2,
+      "google_rating": 4.1,
+      "reddit_comments": [
+        {"text": "Refreshing peach iced tea, great in the Mumbai heat.", "upvotes": 11, "posted_days_ago": 65}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_oily_01",
+      "restaurant_name": "Greasy Spoon Diner",
+      "area": "Bandra West",
+      "cuisine": "North Indian",
+      "dish_id": "d_butter_chicken_gravy",
+      "dish_name": "Extra Oily Butter Chicken Gravy",
+      "tags": ["overly_oily_gravy", "contains_dairy"],
+      "prep_delivery_minutes": 40,
+      "swiggy_rating": 4.0,
+      "google_rating": 3.9,
+      "reddit_comments": [
+        {"text": "Way too oily for me, good flavor but swimming in oil.", "upvotes": 14, "posted_days_ago": 35}
+      ]
+    },
+    {
+      "restaurant_id": "r_bandra_capsicum_01",
+      "restaurant_name": "Punjab Grill Express",
+      "area": "Bandra West",
+      "cuisine": "North Indian",
+      "dish_id": "d_kadai_paneer",
+      "dish_name": "Kadai Paneer with Bell Peppers",
+      "tags": ["contains_bell_peppers", "contains_dairy"],
+      "prep_delivery_minutes": 30,
+      "swiggy_rating": 4.3,
+      "google_rating": 4.2,
+      "reddit_comments": [
+        {"text": "Kadai paneer here has great char on the bell peppers, very good.", "upvotes": 10, "posted_days_ago": 50}
+      ]
+    }
+  ]
+}
