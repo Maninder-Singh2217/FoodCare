@@ -164,6 +164,8 @@ APP_BACKGROUND = "#EFE7D9"  # Soft Linen
 APP_CARD_BACKGROUND = "#FAF7F0"  # slightly lighter, so cards lift off the background
 APP_TEXT_COLOR = "#3A362E"  # warm dark brown-gray for contrast against the cream
 APP_MUTED_TEXT_COLOR = "#6B6455"
+APP_BUTTON_COLOR = "#6B4423"  # woodish brown, replaces default black for visibility on beige
+APP_BUTTON_HOVER_COLOR = "#4A2E17"  # darker wood tone for hover/active state
 
 
 def render_global_theme():
@@ -186,6 +188,23 @@ def render_global_theme():
         }}
         div[data-testid="stColumn"]:has(.cravecare-profile-marker) {{
             background-color: {APP_BACKGROUND};
+        }}
+        .stApp button[data-testid^="stBaseButton-secondary"] {{
+            color: {APP_BUTTON_COLOR} !important;
+            border-color: {APP_BUTTON_COLOR} !important;
+        }}
+        .stApp button[data-testid^="stBaseButton-secondary"]:hover,
+        .stApp button[data-testid^="stBaseButton-secondary"]:focus {{
+            color: {APP_BUTTON_HOVER_COLOR} !important;
+            border-color: {APP_BUTTON_HOVER_COLOR} !important;
+            background-color: {APP_CARD_BACKGROUND} !important;
+        }}
+        .stApp button[data-testid^="stBaseButton-secondary"] p {{
+            color: {APP_BUTTON_COLOR} !important;
+        }}
+        .stApp button[data-testid^="stBaseButton-secondary"]:hover p,
+        .stApp button[data-testid^="stBaseButton-secondary"]:focus p {{
+            color: {APP_BUTTON_HOVER_COLOR} !important;
         }}
         </style>
         """,
